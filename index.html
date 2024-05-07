@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+   <script>
+     tailwind.config = {
+          theme: {
+            extend: {
+              fontFamily: { 
+                    pop: ["Poppons", "sans-serif"], 
+                },
+              colors: { 
+                darkblue:"#3A0CA3",
+                blue: "#4361EE",
+                lightblue:"#D7EEFF",
+                liblue:"#4666FD",
+              },
+            },
+          },
+        };
+   </script>
+    
+</head>
+<body class="text-pop">
+    <section class="hidden md:block md:bg-darkblue md:flex md:justify-between px-[5%] py-3 ">
+            <div class="flex gap-2">
+                <i class="bi bi-geo-alt text-white"></i>
+                <p class="text-white ">Rezilla, 18 Grattan St, Brooklyn</p>
+            </div>
+            <div class="flex gap-2">
+                <i class="bi bi-telephone text-white"></i>
+                <p class="text-white pr-5 ">+1 206-214-2298</p>
+                <i class="bi bi-envelope text-white"></i>
+                <p class="text-white">support@rezilla.com</p>
+            </div>
+            
+        </section>
+    <header class="   bg-cover bg-center" style="background-image: url('images/Rectangle\ 4.png'); object-fit: cover; background-position: center;background-repeat: no-repeat;">
+
+
+        <!-- this navbar from medium to large it's hidden -->
+        <nav class="hidden md:flex md:w-[90%] mx-auto md:items-center md:justify-between md:py-5">
+            <div class="flex items-center gap-6">
+                <a href="#" class="bg-liblue bg-opacity-30 rounded-2xl px-2 py-1 ">Home</a>
+                <a href="#">About</a>
+                <a href="#">Listings</a>
+                <a href="#">Services</a>
+                <a href="#">Blogs</a>
+            </div>
+            <div>
+                <img src="images/logo (3).png" alt="logo" class="w-[90px]">
+            </div>
+            <div class="flex items-center ">
+                <i class="bi bi-person text-black" ></i>
+                <a href="#" class="flex gap-2 pr-6"></i>Login/Register</a>
+                <button class="flex gap-2 bg-darkblue text-white px-2 py-1 rounded-2xl items-center"><img src="images/14-House.png" alt="">Add Listing</button>
+            </div>
+        </nav>
+        <!-- this navbar is for small screens -->
+        <nav class="items-center w-[90%] mx-auto p-3 md:hidden"> 
+            <div class="mb-4 flex items-center justify-between">
+                <img src="images/logo (3).png" alt="logo" class="w-[90px]"> 
+                <div><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                  </svg></div>
+            </div>
+            
+            <div class="hidden">
+                <div class="flex flex-col gap-4 mb-4">
+                    <span href="#" class="text-darkblue font-bold">Home</span>
+                    <a href="#">About</a>
+                    <a href="#">Listings</a>
+                    <a href="#">Services</a>
+                    <a href="#">Blogs</a>
+                </div>
+            
+                <div class=" items-center ">
+                    
+                    <a href="#" class="flex gap-2 pr-6"><i class="bi bi-person text-black mb-4" ></i>Login/Register</a>
+                    <button class="flex gap-2 bg-darkblue text-white px-2 py-1 rounded-2xl items-center"><img src="images/14-House.png" alt="">Add Listing</button>
+                </div>
+            </div>
+            
+        </nav>
+    </header>
+    <main>
+         
+    </main>
+ <script src="script.js"></script>   
+</body>
+</html>
