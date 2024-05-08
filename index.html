@@ -15,6 +15,9 @@
      tailwind.config = {
           theme: {
             extend: {
+              // grayscale: {
+              //     50: '50%',
+             
               fontFamily: { 
                     pop: ["Poppins", "sans-serif"], 
                 },
@@ -96,7 +99,7 @@
         </nav>
 
         <!-- first section -->
-        <section class="flex flex-col w-[90%] mx-auto mt-10 md:w-[80%] md:mx-auto md:flex-row md:justify-between md:my-9  ">
+        <section class="flex flex-col w-[90%] mx-auto mt-10 md:w-[80%] md:mx-auto md:flex-row md:justify-between md:mb-9 mt-[15%]  ">
             <div class="w-[100%] mx-auto md:w-[50%]">
                 <h1 class="text-blue mb-3">REAL ESTATE</h1>
                 <h2 class="font-semibold w-[100%] text-5xl mb-3 md:w-[80%] ">Find a perfect home you love..!</h2>
@@ -160,28 +163,27 @@
             </div>
               
         </section>
-        <section class="hidden md:block">
-          <section class="flex flex-col mt-6 w-[90%] mx-auto md:w-[30%] md:h-[150px] w-[180px] order-first md:order-last md:flex-row md:justify-center">
+        <section class="">
+          <section class="flex flex-col mt-6 w-[90%] mx-auto md:w-[30%] md:h-[150px] w-[180px] order-first md:order-last md:flex-row md:justify-center md:">
             <img src="images/Group 22.png" alt="">
             <img src="images/Group 39.png" alt="">
           </section>
-          <section class="order-last md:order-first">
-            <div>
-              <img src="images/Group 23.png" alt="" class="md:order-1">
+          <section class="mt-[10%]">
+            <div class="flex items-center justify-center">
+              <h3 class="text-grey text-[14px] ">Trusted by 100+ Companies across the globe! </h3>
+            </div>
+            <div class="flex flex-row justify-between items-center  w-[87%] h-[150px] w-[180px] mx-auto filter grayscale">
+              <img src="images/image 1.png" alt="" class="md:order-1">
+              <img src="images/image 2.png" alt="" class="md:order-1">
+              <img src="images/image 3.png" alt="" class="md:order-1">
+              <img src="images/image 4.png" alt="" class="md:order-1">
+              <img src="images/image 5.png" alt="" class="md:order-1">
+              <img src="images/image 6.png" alt="" class="md:order-1">
             </div>
           </section>
         </section>
-        <section class="block md:hidden" >
-          <section class="order-last md:order-first">
-            <div>
-              <img src="images/Group 23.png" alt="" class="md:order-1">
-            </div>
-          </section>
-          <section class="flex flex-col mt-6 w-[90%] mx-auto md:w-[30%] md:h-[150px] w-[180px] order-first md:order-last md:flex-row md:justify-center">
-            <img src="images/Group 22.png" alt="">
-            <img src="images/Group 39.png" alt="">
-          </section>
-        </section>
+        
+        
     </header>
     <main class="w-[90] md:flex flex-row">
         
