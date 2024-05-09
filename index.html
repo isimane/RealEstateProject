@@ -33,10 +33,18 @@
           },
         };
    </script>
+   <style>
+    #navbar{
+      display:none;
+    }
+    #burgerlist{
+      display: block;
+    }
+   </style>
     
 </head>
 <body class="font-pop">
-    <header class="bg-center object-cover  bg-no-repeat" style="background-image: url('images/Rectangle\ 4.png'); object-fit: cover; background-position: center;background-repeat: no-repeat;">
+    <header class="bg-center object-cover mt-6 bg-no-repeat" style="background-image: url('images/Rectangle\ 4.png'); object-fit: cover; background-position: center;background-repeat: no-repeat;">
     <section class="hidden md:block md:bg-darkblue md:flex md:justify-between px-[5%] py-3 ">
             <div class="flex gap-2">
                 <i class="bi bi-geo-alt text-white"></i>
@@ -54,7 +62,7 @@
 
 
         <!-- this navbar from medium to large it's hidden -->
-        <nav class="hidden md:flex md:w-[90%] mx-auto md:items-center md:justify-between md:py-5">
+        <nav  class="hidden md:flex md:w-[90%] mx-auto md:items-center md:justify-between md:py-5">
             <div class="flex items-center gap-6">
                 <a href="#" class="bg-liblue bg-opacity-30 rounded-2xl px-2 py-1 ">Home</a>
                 <a href="#">About</a>
@@ -71,16 +79,15 @@
                 <button class="flex gap-2 bg-darkblue text-white px-2 py-1 rounded-2xl items-center"><img src="images/14-House.png" alt="">Add Listing</button>
             </div>
         </nav>
-        <!-- this navbar is for small screens -->
-        <nav class="items-center w-[90%] mx-auto p-3 md:hidden"> 
-            <div class="mb-4 flex items-center justify-between">
+        <div class="w-[90%] mx-auto mb-4 flex items-center justify-between md:hidden">
                 <img src="images/logo (3).png" alt="logo" class="w-[120px]"> 
-                <div><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-list dark:text-darkblue" viewBox="0 0 16 16">
+                <svg id="burgerlist" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-list dark:text-darkblue" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
-                  </svg></div>
-            </div>
-            
-            <div class="hidden">
+                  </svg>
+        </div>
+        <!-- this navbar is for small screens -->
+        <nav id="navbar" class="items-center w-[90%] mx-auto p-3 hidden"> 
+            <div class="">
                 <div class="flex flex-col gap-4 mb-4">
                     <span href="#" class="text-darkblue font-bold">Home</span>
                     <a href="#">About</a>
@@ -202,8 +209,164 @@
         
         
     </header>
-    <main class="w-[90] md:flex flex-row">
-        
+    <main class="w-[90] ">
+    
+    <img src="images/Group.png" class=" w-[110px] h-[110px] hidden md:relative md:block  md:top-[250px] md:left-[950px] " alt="">
+
+      <section class="flex flex-col w-[90%] mx-auto mt-10 md:w-[80%] md:mx-auto md:flex-row md:justify-between md:mb-9 mt-[15%]  ">
+        <div class="w-[100%] mx-auto md:w-[50%]">
+            <h1 class="text-blue mb-3">WHO ARE WE</h1>
+            <h2 class="font-semibold w-[100%] text-2xl mb-3 md:w-[90%] md: ">Assisting individuals in locating the appropriate real estate.</h2>
+            <p class="text-grey">Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus. Nulla convallis ipsum molestie nibh malesuada, ac malesuada leo volutpat.</p>
+            <div class="flex bg-white drop-shadow-2xl  rounded-2xl my-9 p-6">
+              <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M25.9513 33.0415H16.2585C15.6175 33.0415 15.086 32.51 15.086 31.869C15.086 31.2281 15.6175 30.6965 16.2585 30.6965H25.9513C27.6241 30.6965 29.2656 29.305 29.547 27.6478L31.6262 15.2037C31.8138 14.0781 31.1887 12.4677 30.3132 11.7642L19.479 3.10335C18.2283 2.1028 16.1491 2.10279 14.914 3.0877L4.08004 11.7642C3.18893 12.4833 2.57923 14.0781 2.76683 15.2037L3.20457 17.8456C3.314 18.4866 2.87628 19.0963 2.2353 19.1901C1.59433 19.3152 1.00027 18.8618 0.890838 18.2208L0.4531 15.5946C0.124796 13.656 1.06282 11.1702 2.61054 9.93519L13.4445 1.25852C15.5394 -0.429902 18.838 -0.414253 20.9486 1.27417L31.7826 9.93519C33.3147 11.1702 34.2527 13.656 33.94 15.5946L31.8607 28.0387C31.3917 30.8058 28.7497 33.0415 25.9513 33.0415Z" fill="#4361EE"/>
+                <path d="M6.25378 33.3388C5.6128 33.3388 5.0969 32.8229 5.08127 32.1975C5.03437 30.087 3.643 28.6956 1.53248 28.6487C0.891503 28.6331 0.375582 28.1016 0.391215 27.445C0.406849 26.804 0.922755 26.3037 1.56373 26.3037H1.59498C4.95618 26.3819 7.36376 28.7738 7.42629 32.135C7.44192 32.776 6.926 33.3232 6.28503 33.3388C6.2694 33.3388 6.26941 33.3388 6.25378 33.3388Z" fill="#4361EE"/>
+                <path d="M10.9438 33.3387C10.3028 33.3387 9.77131 32.8227 9.77131 32.1818C9.75566 31.15 9.58369 30.165 9.27102 29.2427C8.47371 26.9602 6.76966 25.2716 4.48717 24.4587C3.56479 24.1304 2.57988 23.9586 1.54807 23.9586C0.907095 23.9586 0.375572 23.427 0.391205 22.7704C0.391205 22.1294 0.922745 21.6135 1.56372 21.6135H1.57935C2.87693 21.6292 4.11196 21.848 5.26884 22.2545C8.22357 23.3019 10.4279 25.5063 11.4753 28.461C11.8818 29.6179 12.1007 30.8686 12.1163 32.1505C12.1163 32.8071 11.6004 33.3387 10.9438 33.3387Z" fill="#4361EE"/>
+                <path d="M1.56335 33.7297C0.687874 33.7297 0 33.0262 0 32.1664C0 31.3065 0.703508 30.603 1.56335 30.603C2.42319 30.603 3.1267 31.3065 3.1267 32.1664C3.1267 33.0262 2.43883 33.7297 1.56335 33.7297Z" fill="#4361EE"/>
+                </svg>
+              <div class="pl-5">
+                <h3 class="text-[18px]  text-blue">Donec porttitor euismod</h3>
+                <p class="text-grey text-[14px]">Nullam a lacinia ipsum, nec dignissim purus. Nulla</p>
+              </div>
+            </div>
+            <div class="flex bg-white drop-shadow-2xl  rounded-2xl my-9 p-6 ">
+              
+                <svg width="38" height="41" viewBox="0 0 38 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M36 14.3127V27.1118C36 29.2075 34.8773 31.1536 33.0622 32.2202L21.9471 38.6385C20.1321 39.6864 17.8866 39.6864 16.0528 38.6385L4.93781 32.2202C3.12273 31.1723 2 29.2262 2 27.1118V14.3127C2 12.2169 3.12273 10.2708 4.93781 9.20418L16.0528 2.78591C17.8679 1.73803 20.1133 1.73803 21.9471 2.78591L33.0622 9.20418C34.8773 10.2708 36 12.1982 36 14.3127Z" stroke="#4361EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M19.0093 18.8412C21.4174 18.8412 23.3693 16.8891 23.3693 14.4812C23.3693 12.0733 21.4174 10.1213 19.0093 10.1213C16.6015 10.1213 14.6495 12.0733 14.6495 14.4812C14.6495 16.8891 16.6015 18.8412 19.0093 18.8412Z" stroke="#4361EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M26.4942 29.4325C26.4942 26.0643 23.1447 23.3323 19.0093 23.3323C14.8739 23.3323 11.5244 26.0643 11.5244 29.4325" stroke="#4361EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              <div class="pl-5">
+                <h3 class="text-[18px]  text-blue">Donec porttitor euismod</h3>
+                <p class="text-grey text-[14px]">Nullam a lacinia ipsum, nec dignissim purus. Nulla</p>
+              </div>
+            </div>
+          </div>
+        <div class="flex flex-row ">
+          <div>
+            
+            <img src="images/Rectangle 14.png" class="mt-[100px]" alt="">
+          </div>
+          <div >
+            <img src="images/Rectangle 15.png" alt="">
+            <img src="images/Rectangle 16.png" alt="">
+          </div>
+        </div>
+      </section>
+      <section class="flex flex-col md:flex-row mt-8 w-[90%] md:w-[80%] mx-auto items-center">
+        <div class="">
+          <h1 class="text-blue mb-3 ">CHECKOUT OUR NEW</h1>
+          <h2 class="font-semibold w-[100%] md:w-[50%] text-xl mb-3   ">Latest Listed Properties</h2>
+          <p class="text-grey w-[90%]">Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus. </p>
+        </div>
+        <div class="space-y-8 space-x-8">
+          <button class="border-1 border-darkblue rounded-3xl px-4 py-1 text-darkblue">All</button>
+          <button class=" bg-darkblue rounded-3xl px-4 py-1 text-white">Sell</button>
+          <button class="border-1 border-darkblue rounded-3xl px-4 py-1 text-darkblue">Rent</button>
+        </div>
+      </section>
+      <section class="bg-lightgrey bg-opacity-25 p-6 mt-20">
+          <div class="w-[50%] mx-auto flex justify-center mb-6">
+            <h4 class="">OUR SERVICES</h4>
+          </div>
+          <div>
+              <p class="font-bold text-2 flex justify-center">Donec porttitor euismod dignissim</p>
+          </div>
+          <section class="w-[90%] mx-auto mt-20 space-y-8  pb-20 flex flex-col md:flex-row md:space-x-8 md:space-y-0"> 
+                <div class="bg-white rounded-[20px] py-[35px] ">
+                    <div class="flex justify-center ">
+                        <div class="w-[60px] h-[60px] rounded-full bg-blue flex justify-center items-center shadow-lg shadow-blue ">
+                          <svg width="26" height="27" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M26.1116 21.7846L21.7196 17.3925L18.3413 15.9968C19.4662 14.3972 20.0688 12.4888 20.0666 10.5333C20.0666 5.27661 15.79 1 10.5333 1C5.27661 1 1 5.27661 1 10.5333C1 15.79 5.27661 20.0666 10.5333 20.0666C12.5059 20.0689 14.43 19.4558 16.0377 18.3129L17.4297 21.682L21.8216 26.0743C22.1033 26.356 22.4377 26.5794 22.8057 26.7319C23.1737 26.8843 23.5682 26.9628 23.9665 26.9628C24.3649 26.9628 24.7593 26.8844 25.1274 26.7319C25.4954 26.5795 25.8298 26.3561 26.1115 26.0744C26.3932 25.7928 26.6166 25.4584 26.7691 25.0903C26.9215 24.7223 27 24.3279 27 23.9295C27 23.5312 26.9216 23.1367 26.7691 22.7687C26.6167 22.4007 26.3933 22.0662 26.1116 21.7846ZM2.73333 10.5333C2.73333 6.23249 6.23249 2.73333 10.5333 2.73333C14.8341 2.73333 18.3333 6.23249 18.3333 10.5333C18.3333 14.8341 14.8341 18.3333 10.5333 18.3333C6.23249 18.3333 2.73333 14.8341 2.73333 10.5333ZM24.8859 24.8487C24.6419 25.0921 24.3113 25.2288 23.9666 25.2288C23.6219 25.2288 23.2913 25.0921 23.0474 24.8487L18.8997 20.701L17.6055 17.5683L20.7383 18.8626L24.886 23.0102C25.1294 23.2542 25.2661 23.5848 25.2661 23.9294C25.266 24.2741 25.1293 24.6047 24.8859 24.8487Z" fill="white" stroke="white" stroke-width="0.6"/>
+                            </svg>                           
+                        </div>
+                    </div>
+                    <div class="text-center px-[42px] mt-[15px] space-y-[8px]">
+                        <h2 class="font-medium text-darkblue">Buy a new home</h2>
+                        <p class="text-[13.5px] text-Grey  ">Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec  <br> dignissim purus. </p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-[20px] py-[35px] ">
+                    <div class="flex justify-center ">
+                        <div class="w-[60px] h-[60px] rounded-full bg-blue flex justify-center items-center shadow-lg shadow-blue ">
+                            <svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24.4464 11.2685L13.8078 1.481C13.4619 1.16281 13.0065 0.990611 12.5366 1.0004C12.0668 1.01018 11.6189 1.20119 11.2866 1.5335L1.50213 11.318L1 11.8201V26.2444H10.4286V17.2444H15.5714V26.2444H25V11.7779L24.4464 11.2685ZM12.5735 2.71432C12.5886 2.71432 12.5793 2.71758 12.5728 2.72396C12.5661 2.71758 12.5584 2.71432 12.5735 2.71432ZM23.2857 24.5302H17.2857V17.2444C17.2857 16.7898 17.1051 16.3538 16.7836 16.0323C16.4621 15.7108 16.0261 15.5302 15.5714 15.5302H10.4286C9.97392 15.5302 9.53788 15.7108 9.21639 16.0323C8.8949 16.3538 8.71429 16.7898 8.71429 17.2444V24.5302H2.71429L2.71429 12.5302L12.5735 2.74566L12.5748 2.74378L23.2857 12.5302V24.5302Z" fill="white" stroke="white" stroke-width="0.6"/>
+                                </svg>                            
+                        </div>
+                    </div>
+                    <div class="text-center px-[42px] mt-[15px] space-y-[8px]">
+                        <h2 class="font-medium text-darkblue">Sell a House</h2>
+                        <p class="text-[13.5px] text-Grey  ">Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec  <br> dignissim purus. </p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-[20px] py-[35px] ">
+                    <div class="flex justify-center ">
+                        <div class="w-[60px] h-[60px] rounded-full bg-blue flex justify-center items-center shadow-lg shadow-blue ">
+                            <svg width="28" height="21" viewBox="0 0 28 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M23.3333 4.2H11.2V11.2361H9.90768V8.84444C9.90619 7.48937 9.36723 6.19023 8.40906 5.23204C7.45089 4.27385 6.15176 3.73486 4.79669 3.73333H1.86667V0H0V20.0667H1.86667V17.2817L26.1333 17.4758V20.0667H28V8.86667C27.9986 7.62942 27.5065 6.44325 26.6316 5.56839C25.7567 4.69352 24.5706 4.20141 23.3333 4.2ZM1.86667 5.6H4.79669C5.65684 5.60097 6.48148 5.9431 7.0897 6.55132C7.69792 7.15953 8.04004 7.98418 8.04102 8.84433V11.236H1.86667V5.6ZM26.1333 15.6091L1.86667 15.4149V13.1028H26.1333V15.6091ZM26.1333 11.2361H13.0667V6.06667H23.3333C24.0757 6.06752 24.7874 6.36279 25.3123 6.88771C25.8372 7.41263 26.1325 8.12432 26.1333 8.86667V11.2361Z" fill="white"/>
+                                </svg>                                                           
+                        </div>
+                    </div>
+                    <div class="text-center px-[42px] mt-[15px] space-y-[8px]">
+                        <h2 class="font-medium text-darkblue">Rent a House</h2>
+                        <p class="text-[13.5px] text-Grey  ">Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec  <br> dignissim purus. </p>
+                    </div>
+                </div>
+            </div>
+          </section>
+        </section> 
+
+        <section class="w-[80%] mx-auto mt-9">
+          <div class="space-y-2">
+            <h5 class="text-blue">AREAS ACROSS THE TOWN</h5>
+            <p class="text-xl font-semibold">Neighborhood Properties</p>
+          </div>
+          <div>
+            <div class="mt-[30px] grid grid-cols-2 md:grid-cols-3">
+              
+                  <img src="images/Property 1.png" alt="img" class="object-cover-fit w-[250px]">
+                  <img src="images/Property 3.png" alt="img" class="object-cover object-fit">
+                  <img src="images/Property 4.png" alt="img" class="object-cover object-fit">
+              
+                  <img src="images/Property 2.png" alt="img" class="object-cover object-fit">
+                  <img src="images/Property 5.png" alt="img" class="object-cover object-fit">
+             
+          </div>
+           
+          <div class="text-center">
+              <p class="text-4 text-blue font-medium mt-[60px] ">AREAS ACROSS THE TOWN</p>
+              <p class="mt-[10px]  text-black font-semibold text-[27px] ">Our Team of Experts</p>
+          </div> 
+        </section>
+        <section>
+            <div class="mt-[30px] flex flex-col  md:flex-row md:w-[90%] md:mx-auto">
+              <div class="flex space-x-6 md:flex-row">
+                  <div class="text-center">
+                      <img src="images/Rectangle 29.png" alt="img">
+                      <p class="font-medium text-Darkblc">Brendon M</p>
+                      <p class="leading-5 text-primary text-[13px]">CEO & Founder</p>
+                  </div>
+                  <div class="text-center">
+                      <img src="images/Rectangle 30.png" alt="img">
+                      <p class="font-medium text-Darkblc">Jodi J. Appleby</p>
+                      <p class="leading-5 text-primary text-[13px] ">Real Estate Developer</p>
+                  </div>
+              </div>
+              <div class="flex space-x-6 md:flex-row">
+                  <div class="text-center">
+                      <img src="images/Rectangle 31.png" alt="img">
+                      <p class="font-medium text-Darkblc">Justin S. Meza</p>
+                      <p class="leading-5 text-primary text-[13px] ">Listing Agent</p>
+                  </div>
+                  <div class="text-center">
+                      <img src="images/Rectangle 32.png" alt="img">
+                      <p class="font-medium text-Darkblc">Susan T. Smith</p>
+                      <p class="leading-5 text-primary text-[13px] ">Buyer's Agent</p>
+                  </div>
+              </div>
+          </div>  
+        </section>
     </main>
  <script src="script.js"></script>   
 </body>
