@@ -1,8 +1,21 @@
 
 const burgerlist = document.getElementById("burgerlist");
+
 const navbar = document.getElementById("navbar");
+
+const inpute = document.getElementById('input');
+
+const select = document.getElementById('select');
+
+const form = document.getElementById('form');
+
+const errorMessage =document.getElementById('errorMessage')
+
+
+
 burgerlist.addEventListener('click', () =>{
     console.log(navbar.style.display);
+
     if(navbar.style.display !== 'block'){
         navbar.style.display ='block';
         // burgerlist.style.display ='none';
@@ -15,3 +28,12 @@ burgerlist.addEventListener('click', () =>{
 //         navbar.classList.toggle('hidden');
 //     })
 ;
+form.addEventListener('submit', (e)=>{
+
+    if(input.value === '' || input.value === null){
+        errorMessage.innerText = 'Please enter a valid name';
+        console.log(errorMessage)
+    }
+    e.preventDefault();
+    
+})
