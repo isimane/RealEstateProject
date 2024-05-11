@@ -3,7 +3,7 @@ const burgerlist = document.getElementById("burgerlist");
 
 const navbar = document.getElementById("navbar");
 
-const inpute = document.getElementById('input');
+const input = document.getElementById('input');
 
 const select = document.getElementById('select');
 
@@ -30,10 +30,10 @@ burgerlist.addEventListener('click', () =>{
 ;
 form.addEventListener('submit', (e)=>{
 
-    if(input.value === '' || input.value === null){
+    if(input.value === " "){
         errorMessage.innerText = 'Please enter a valid name';
-        console.log(errorMessage)
+        e.preventDefault();
     }
-    e.preventDefault();
+   
     
 })
