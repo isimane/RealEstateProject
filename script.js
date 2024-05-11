@@ -35,9 +35,9 @@ form.addEventListener('submit', (e)=>{
         errorMessage.innerText = "Please fill out this field";
         // alert('Please enter a valid name');
         e.preventDefault() // to prevent the submission if the input is empty
-    }else{
-        successMessage.innerText = "great"
-    };
+    }// else{
+    //     successMessage.innerText = "great"
+    // };
 
     
 })
