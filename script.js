@@ -31,16 +31,13 @@ burgerlist.addEventListener('click', () =>{
 //     })
 ;
 form.addEventListener('submit', (e)=>{
-
-    // if( input.length.value === 0 ){ 
-    if( input.value === "" || input.value === null ){
-        // errorMessage.innerText = "Please fill out this field";
-        alert('Please enter a valid name');
-        console.log("Input is empty");
-        e.preventDefault();
+    if( input.value == "" || input.value == null ){
+        errorMessage.innerText = "Please fill out this field";
+        // alert('Please enter a valid name');
+        e.preventDefault() // to prevent the submission if the input is empty
     }else{
         successMessage.innerText = "great"
-    }
-    e.preventDefault();
+    };
+
     
 })
