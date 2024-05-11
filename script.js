@@ -9,7 +9,9 @@ const select = document.getElementById('select');
 
 const form = document.getElementById('form');
 
-const errorMessage =document.getElementById('errorMessage')
+const errorMessage =document.getElementById('errorMessage');
+
+const successMessage =document.getElementById('successMessage');
 
 
 
@@ -30,10 +32,15 @@ burgerlist.addEventListener('click', () =>{
 ;
 form.addEventListener('submit', (e)=>{
 
-    if(input.value === " "){
-        errorMessage.innerText = 'Please enter a valid name';
+    // if( input.length.value === 0 ){ 
+    if( input.value === "" || input.value === null ){
+        // errorMessage.innerText = "Please fill out this field";
+        alert('Please enter a valid name');
+        console.log("Input is empty");
         e.preventDefault();
+    }else{
+        successMessage.innerText = "great"
     }
-   
+    e.preventDefault();
     
 })
