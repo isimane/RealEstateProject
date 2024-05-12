@@ -1,7 +1,8 @@
 
-const burgerlist = document.getElementById("burgerlist");
+const hamburgerlist = document.getElementById("burgerlist");
 
 const navbar = document.getElementById("navbar");
+const unshowlist = document.getElementById("unshowlist")
 
 const input = document.getElementById('input');
 
@@ -15,29 +16,46 @@ const successMessage =document.getElementById('successMessage');
 
 
 
-burgerlist.addEventListener('click', () =>{
+hamburgerlist.addEventListener('click', () =>{
     console.log(navbar.style.display);
 
     if(navbar.style.display !== 'block'){
         navbar.style.display ='block';
-        // burgerlist.style.display ='none';
-    }else{
+        hamburgerlist.style.display ='none';
+        unshowlist.style.display ='block';
+        
+    }
+    else{
         navbar.style.display ='none';
-        // burgerlist.style.display ='block';
+        // hamburgerlist.style.display ='block';
     };
 })
-//     burgerlist.addEventListener("click", ()=>{
-//         navbar.classList.toggle('hidden');
-//     })
-;
+
+unshowlist.addEventListener('click', () =>{
+    if(navbar.style.display == 'block'){
+        navbar.style.display ='none';
+        hamburgerlist.style.display ='block';
+        unshowlist.style.display ='none';
+        
+    }else{
+        navbar.style.display ='block';
+       
+        
+    }
+});
+
 form.addEventListener('submit', (e)=>{
-    if( input.value == "" || input.value == null ){
+    if( !input.value){
         errorMessage.innerText = "Please fill out this field";
         // alert('Please enter a valid name');
         e.preventDefault() // to prevent the submission if the input is empty
-    }// else{
-    //     successMessage.innerText = "great"
-    // };
+    }else if(String(input.value) === ''){
+        errorMessage.innerText = "Please enter a valid address";
+        
+    }
+     else{
+        successMessage.innerText = "Great!!"
+    };
 
     
 })
