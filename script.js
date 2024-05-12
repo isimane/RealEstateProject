@@ -42,11 +42,14 @@ unshowlist.addEventListener('click', () =>{
        
         
     }
+    // navbar.classList.toggle('hidden');
 });
 
 form.addEventListener('submit', (e)=>{
-    if( !input.value){
+    if( !input.value ){
         errorMessage.innerText = "Please fill out this field";
+        input.classList.add('outline-[#FF0000]')
+        input.classList.remove('outline-none')
         // alert('Please enter a valid name');
         e.preventDefault() // to prevent the submission if the input is empty
     }else if(String(input.value) === ''){
