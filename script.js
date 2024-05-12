@@ -46,12 +46,10 @@ unshowlist.addEventListener('click', () =>{
 });
 
 form.addEventListener('submit', (e)=>{
-    if( !input.value ){
-        errorMessage.innerText = "Please fill out this field";
+    if(!input.value.trim()){
+        errorMessage.innerText = "Please enter a valid address!";
         input.classList.add('border-2','border-[#FF0000]')
         e.preventDefault() // to prevent the submission if the input is empty
-    }else if(String(input.value) === ''){
-        errorMessage.innerText = "Please enter a valid address"; 
     }
      else{
         successMessage.innerText = "Great!!"
