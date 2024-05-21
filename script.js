@@ -23,7 +23,7 @@ hamburgerlist.addEventListener('click', () =>{
         navbar.style.display ='block';
         hamburgerlist.style.display ='none';
         unshowlist.style.display ='block';
-        
+
     }
     else{
         navbar.style.display ='none';
@@ -36,16 +36,17 @@ unshowlist.addEventListener('click', () =>{
         navbar.style.display ='none';
         hamburgerlist.style.display ='block';
         unshowlist.style.display ='none';
-        
+ 
     }else{
         navbar.style.display ='block';
-       
-        
+
+ 
     }
     // navbar.classList.toggle('hidden');
 });
 
 form.addEventListener('submit', (e)=>{
+    e.preventDefault()
     if(!input.value.trim()){
         errorMessage.innerText = "Please enter a valid address!";
         input.classList.add('border-2','border-[#FF0000]')
@@ -55,5 +56,5 @@ form.addEventListener('submit', (e)=>{
         successMessage.innerText = "Great!!"
     };
 
-    
+
 })
