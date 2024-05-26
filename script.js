@@ -53,16 +53,16 @@ form.addEventListener('click', ()=>{
             if(!input.value.trim() ){
                 input.value.clear();
                 errorMessage.innerText = "Please enter Your address!";
-                input.classList.add('border-2','border-[#FF0000]')
+                input.classList.add('border-2','border-[#FF0000]');
                 e.preventDefault() // to prevent the submission if the input is empty
             }
             else if(!regex.test(input.value)){
                 errorMessage.innerText = "Please enter a valid address!"
-                input.classList.add('border-2','border-[#FF0000]')
+                input.classList.add('border-2','border-[#FF0000]');
                 e.preventDefault();
             }
             else{
-                successMessage.innerText = ""
+                successMessage.innerText = "";
             };
-        })
-})
+        });
+});
