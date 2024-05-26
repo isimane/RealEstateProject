@@ -16,6 +16,7 @@ const successMessage =document.getElementById('successMessage');
 
 
 
+
 hamburgerlist.addEventListener('click', () =>{
     console.log(navbar.style.display);
 
@@ -46,14 +47,19 @@ unshowlist.addEventListener('click', () =>{
 });
 
 form.addEventListener('submit', (e)=>{
-    e.preventDefault()
-    if(!input.value.trim()){
-        errorMessage.innerText = "Please enter a valid address!";
+    let regex = /[a-z]/ig ;
+    if(!input.value.trim() ){
+        errorMessage.innerText = "Please enter Your address!";
         input.classList.add('border-2','border-[#FF0000]')
         e.preventDefault() // to prevent the submission if the input is empty
     }
+    else if(!regex.test(input.value)){
+        errorMessage.innerText = "Please enter a valid address!"
+        input.classList.add('border-2','border-[#FF0000]')
+        e.preventDefault();
+    }
      else{
-        successMessage.innerText = "Great!!"
+        successMessage.innerText = ""
     };
 
 
