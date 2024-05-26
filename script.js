@@ -46,7 +46,7 @@ unshowlist.addEventListener('click', () =>{
     // navbar.classList.toggle('hidden');
 });
 form.addEventListener('click', ()=>{
-    input.classList.add('border-1','border-[#0000FF]');
+    input.classList.add('border-1','border-darkblue');
         form.addEventListener('submit', (e)=>{
             let regex = /[a-z]/ig ;
             
